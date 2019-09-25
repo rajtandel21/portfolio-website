@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Raj Tandel</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!--Design notes 
+		1. Simple div expand and shrink design to only show info that clicked.
+		2. The div will each have different background. Simple colours.
+		3. Try to use gif, liquid image transition and icons instead of pics
+		4. Try to make it display differently on phones-->
+    <div class="container">
+      <div class="rajTandel section">
+        <!--page heading-->
+        <h1 class="sectionHeading">About Me</h1>
+        <!--Design
+				1.picture with liquid transition on left of page (inside div for eaiser manipulation)
+				2.self intro on the right (uni,grade,interests)
+		-->
+        <div class="selfIntro hidden">
+          <img class="myImage" src="./myImg/myPicture2.jpg" alt="" />
+          <div class="myTextLink">
+            <p class="introText">
+              My name is Raj Tandel.</br>
+            </br>
+              I am a Computer Science graduate looking to
+              start my carrier in software development. I have worked on many
+              projects through my academic years and have experience in many programming languages.
+            </p>
+            <div>
+                <img class="icons github githubImg1" src="./eduImg/githubImg.png" alt="GitHubLink">
+                <img class="icons linkedin" src="./eduImg/linkedinImg.png" alt="LinkedinLink">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="education section">
+        <h1 class="sectionHeading smallText">Education</h1>
+        <!--Design
+				1.incase too much info to display on one page
+				2.create div horizontally to open and display informtion for 
+        specific stage of studies.(uni,college,secondary,etc)
+        .modules
+      -->
+        <div class="modules hidden active">
+          <!--show uni symbol/logo
+          hover over the image will fade into the uni results,
+        or will display results on top of page (z-index)-->
+          <div class="uni hover">
+            <h3 class="eduTitle">Middlesex University</h3>
+            <h3>(2014-2017)</h3>
+            <img class="eduLogos" src="./eduImg/uniImg.jpg" alt="UniLogo" />
+            <div class="eduInfo effect">
+              <h4>Computer Science</h4>
+              <p>Programming Languages:</p>
+              <ul>
+                <li>HTML,CSS,JavaScript</li>
+                <li>ES6</li>
+                <li>ReactJs</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Erlang</li>
+              </ul>
+            </div>
+          </div>
+          <div class="college hover">
+            <h3>Woodhouse College</h3>
+            <h3>(2012-2014)</h3>
+            <img
+              class="eduLogos"
+              src="./eduImg/collegeImage.jpg"
+              alt="CollegeLogo"
+            />
+            <div class="eduInfo">
+              <h4>A-Level:</h4>
+              <ul>
+                <li>Maths</li>
+                <li>Business</li>
+                <li>ICT</li>
+              </ul>
+            </div>
+          </div>
+          <div class="secondary hover">
+            <h3>Secondary School</h3>
+            <h3>(2007-2012)</h3>
+            <img
+              class="eduLogos"
+              src="./eduImg/schoolImage.png"
+              alt="SchoolLogo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="projects section">
+        <h1 class="sectionHeading smallText">Projects</h1>
+        <!--Design
+			  1.use icons or imgs and then project title under it
+			  2.open new screen on top of page to show project details (z-index)
+      -->
+        <div class="hidden active projectInfo">
+            <img class="icons github" src="./eduImg/githubImg.png" alt="GitHubLink">
+          <div class="twoProjects">
+            <div>
+                <img class="projectGif" src="./proImg/XnOImg.png" alt="project1Gif">
+                <p>X and O Java Game</p>
+            </div>
+            <div>
+              <img class="projectGif" src="./proImg/travelImg.png" alt="project2gif">
+                <p>Scenery Travels web Gallary</p>
+            </div>
+          </div>
+          <div class="twoProjects">
+            <div>
+              <img class="projectGif" src="./proImg/unityGameImg.png" alt="project3Gif">
+                <p>Island Escape Unity Game</p>
+            </div>
+            <div>
+              <img class="projectGif" src="./proImg/advertImg.png" alt="project4Gif">
+                <p>Safe Driving OpenGL Advert</p>
+            </div>
+          </div>
+          <div class="bigProjectGif">
+            <span class="close">&times;</span>
+            <img class="bigGifImage" src="" alt="ProjectGif">
+          </div>
+        </div>
+      </div>
+
+      <div class="experience section">
+        <h1 class="sectionHeading smallText">Experience</h1>
+        <div class="hidden active expInfo">
+          <div class="expLogoInfo">
+              <img class="expLogo" src="./expImg/m-and-c-saatchi-logo.jpg" alt="M&CSaatchiLogo">
+              <p>
+                M&C Saatchi IT Support Assistant (November 2018 - December 2018)
+              </p>
+          </div>
+          <div class="expLogoInfo">
+              <img class="expLogo" src="./expImg/tescoExtra2.jpg" alt="TescoLogo">
+              <p>Tesco Extra (November 2017 - January 2018)</p>
+          </div>
+          <p>Friern Barnet Library (2010 Volunteer work)</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
