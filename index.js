@@ -58,26 +58,50 @@ window.addEventListener("load", () => {
     });
   });
 
-  const XnOGif = "./proImg/XnOgif.gif";
-  const travelGif = "./proImg/travelGif.gif";
-  const unityGameGif = "./proImg/unityGameGif.gif";
-  const advertGif = "./proImg/advertGif.gif";
+  if (document.images) {
+    //project images
+    XnOImg = new Image();
+    travelImg = new Image();
+    unityGameImg = new Image();
+    advertImg = new Image();
+
+    //project gifs
+    XnOGif = new Image();
+    travelGif = new Image();
+    unityGameGif = new Image();
+    advertGif = new Image();
+
+    XnOImg.src = "./proImg/XnOImg.png";
+    travelImg.src = "./proImg/travelImg.png";
+    unityGameImg.src = "./proImg/unityGameImg.png";
+    advertImg.src = "./proImg/advertImg.png";
+
+    XnOGif.src = "./proImg/XnOgif.gif";
+    travelGif.src = "./proImg/travelGif.gif";
+    unityGameGif.src = "./proImg/unityGameGif.gif";
+    advertGif.src = "./proImg/advertGif.gif";
+  }
+
+  closeBtn.addEventListener("click", function() {
+    bigGifSection.style.display = "none";
+    bigGifImg.src = "";
+  });
 
   //for the mouseover to play gif substitute between image and gif
   projectGifs.forEach((gif, index) => {
     gif.addEventListener("mouseover", function() {
       switch (index) {
         case 0:
-          gif.src = XnOGif;
+          gif.src = XnOGif.src;
           break;
         case 1:
-          gif.src = travelGif;
+          gif.src = travelGif.src;
           break;
         case 2:
-          gif.src = unityGameGif;
+          gif.src = unityGameGif.src;
           break;
         case 3:
-          gif.src = advertGif;
+          gif.src = advertGif.src;
           break;
       }
     });
@@ -85,16 +109,16 @@ window.addEventListener("load", () => {
       bigGifSection.style.display = "block";
       switch (index) {
         case 0:
-          bigGifImg.src = XnOGif;
+          bigGifImg.src = XnOGif.src;
           break;
         case 1:
-          bigGifImg.src = travelGif;
+          bigGifImg.src = travelGif.src;
           break;
         case 2:
-          bigGifImg.src = unityGameGif;
+          bigGifImg.src = unityGameGif.src;
           break;
         case 3:
-          bigGifImg.src = advertGif;
+          bigGifImg.src = advertGif.src;
           break;
       }
     });
@@ -104,22 +128,18 @@ window.addEventListener("load", () => {
     gif.addEventListener("mouseout", function() {
       switch (index) {
         case 0:
-          gif.src = "./proImg/XnOImg.png";
+          gif.src = XnOImg.src;
           break;
         case 1:
-          gif.src = "./proImg/travelImg.png";
+          gif.src = travelImg.src;
           break;
         case 2:
-          gif.src = "./proImg/unityGameImg.png";
+          gif.src = unityGameImg.src;
           break;
         case 3:
-          gif.src = "./proImg/advertImg.png";
+          gif.src = advertImg.src;
           break;
       }
     });
-  });
-
-  closeBtn.addEventListener("click", function() {
-    bigGifSection.style.display = "none";
   });
 });
